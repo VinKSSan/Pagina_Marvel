@@ -5,7 +5,7 @@ export default function pageCharacter() {
     
     return(
         <>
-            <h1>Charactere details : {JSON.parse(roter.query)}</h1>
+            <h1>Charactere details : {JSON.stringify(roter.query)}</h1>
         </>
     )
 }

@@ -1,30 +1,35 @@
 import { styled } from "./../../../styles/index";
 
-
 import bgHero from "./../../../assets/bg-hero.jpg"
-import { Conteiner } from "@/styles/global";
-import { Linter } from "eslint";
+import { Conteiner } from "@/styles/global"; 
 
 export const SecHeroStyles = styled("section" , {
     position:"relative" , 
-    zIndex:"1",
+    zIndex:1,
     width:"100%",
     height:731,
-    backgroundImage: `url(${bgHero.src}) no-repeat  top center`,
+    backgroundImage: `url(${bgHero.src})`,
+    backgroundAttachment: "fixed",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "top center",
+    backgroundSize: "cover",
     paddingTop:96,
     display:"flex",
+    "&:after": {
+        content:"",
+        position:"absolute",
+        top: 0,
+        left:0,
+        width:"100%",
+        height:"100%",
+        backgroundImage: "linear-gradient(transparent, #000000)",
+        zIndex:-1,
+    },
     [`${Conteiner}`] : {
         display: "flex",
         alignItems: "flex-start",
 
     },
-    "&:after": {
-        content:"",
-        position:"absolute",
-        width:"100%",
-        height:300,
-        backgroundImage: "linear-gradient(transparent, #000000)"
-    }
 })
 
 export const SotialArea = styled("div" , {
@@ -38,7 +43,7 @@ export const SotialArea = styled("div" , {
         alignItems: "center",
         listStyle:"none",
         padding:"30px 0",
-        borderBottom: "rgba(255, 255 ,255, 0.2)",
+        borderBottom: "1px solid rgba(255, 255 ,255, 0.2)",
         li:{
             "&:not(:last-child)" : {
                 marginBottom:32,
@@ -61,15 +66,15 @@ export const ContextText = styled("div", {
     justifyContent: "space-between" ,
     flex:1,
     paddingBottom:31,
-    borderRight: "rgba(255, 255 ,255, 0.2)",
-    ".left" : {
+    borderRight: "1px solid rgba(255, 255 ,255, 0.2)",
+    "& .left" : {
         flex:1,
         maxWidth:574,
         paddingBottom:"10.1rem",
         h3 : {
-            fontWeight:700,
-            fontSize:14,
-            lineHeight:21,
+            fontWeight:"700",
+            fontSize:"14px",
+            lineHeight:"21px",
             letterSpacing:"0.095rem",
             color: "#FFA800",
             marginBottom:8,
@@ -84,7 +89,7 @@ export const ContextText = styled("div", {
         p: {
             fontWeight:400,
             fontSize:"1.6rem",
-            lineHeight:24,
+            lineHeight:"21px",
             color:"$gray200",
             maxWidth:490,
             marginBottom:32,
@@ -93,6 +98,15 @@ export const ContextText = styled("div", {
             display:"inline-block",
             padding:"15px 52px",
             backgroundColor: "$red900",
+            borderRadius : 5,
+            fontSize:"1.6rem",
+            fontWeight:600,
+            lineHeight:"2.4rem",
+            color: "$white",
+            trasition: "filter .10s",
+            "&:hover": {
+                filter : "brightness(0.7)",
+            }
         }
         
     }

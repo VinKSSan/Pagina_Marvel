@@ -40,18 +40,7 @@ export const StyledHeader = styled("header" , {
         alignItems:"center",
         height:"100%",
         padding: "0 23px",
-        borderLeft: "solid 1px rgba(255  , 255 , 255, 0.2)",
-        "&:before": {
-            content: "",
-            backgroundColor: "$red800",
-            boxShadow: "0px  2px 4px  rgba(255 , 4 , 13 , 0.16)",
-            position: "absolute",
-            width: 104,
-            height:1,
-            bottom: 0, 
-            right: 117,
-
-        }       
+        borderLeft: "solid 1px rgba(255  , 255 , 255, 0.2)",       
 
     }
 

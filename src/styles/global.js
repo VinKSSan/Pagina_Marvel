@@ -6,13 +6,14 @@ export const GlobalStyles = globalCss({
         margin:0,
         boxSizing: "border-box",
         fontFamily: "poppins , sans serif",
+        textDecoration: "none",
+        listStyle:"none",
 
     },
     html: {
         fontSize: "62.5%",
-
     },
-    body: {
+    body: {        
         "webKit-font-smoothing": "antialiased",
         background: "linear-gradient( 119.36deg ,#010101 0%, #000000 100%)",
         color: "$white",

@@ -1,5 +1,8 @@
 import Image from "next/image";
-import icon_Play from "./../../assets/play.svg"
+import icon_Play from "./../../../assets/play.svg"
+
+import { PopVideoStyles } from "./sltylesPop";
+
 export function PopVideo() {
     return(
         <PopVideoStyles>
