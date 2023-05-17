@@ -1,3 +1,6 @@
+import { SecHerChar } from "@/componentes/detalhes/sectionHeroCharacter/indexSecHerChar";
+import { ListCara } from "@/componentes/listaCara/indexCara";
+import { PagTi } from "@/componentes/pageTitle";
 import { useRouter } from "next/router"
 
 export default function pageCharacter() {
@@ -5,7 +8,9 @@ export default function pageCharacter() {
     
     return(
         <>
-            <h1>Charactere details : {JSON.stringify(roter.query)}</h1>
+            <PagTi title="pagina de personagens"/>
+            <SecHerChar/>
+            <ListCara/>
         </>
     )
 }

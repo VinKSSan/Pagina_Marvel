@@ -4,6 +4,7 @@ import bgHero from "./../../../assets/bg-hero.jpg"
 import { Conteiner } from "@/styles/global"; 
 
 export const SecHeroStyles = styled("section" , {
+    padding: "0 6rem",
     position:"relative" , 
     zIndex:1,
     width:"100%",

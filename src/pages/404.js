@@ -1,11 +1,11 @@
-export default function() {
+import { PageNotFau } from "@/componentes/pageNotFound/indexPaNoFa";
+import { PagTi } from "@/componentes/pageTitle";
+
+export default function PageNotFaut() {
     return(
         <>
-            <div>
-                <h1>
-                    pagina não encontrada
-                </h1>
-            </div>
+            <PagTi title="não encontrada" description="pagina de não encontrados"></PagTi>
+            <PageNotFau/>
         </>
     )
 }

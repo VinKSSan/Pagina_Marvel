@@ -47,5 +47,21 @@ export const StylesListCara = styled("div" , {
         display:"flex",
         alignItems: "center",
         justifyContent: "center",
-    }
+    },
+    "@lgScreen": {
+        margin: "0 auto",
+        maxWidth:"90%",
+    },
+    "@tablet": {
+        gridTemplateColumns: "repeat(2 , 1fr)",
+        gridGap: "6rem 7.5rem",
+        margin: "0 auto",
+        maxWidth:"80%",
+        CardsCharac :{
+            width:"50vh"
+        }
+    },
+    "@mobile": {
+        gridTemplateColumns: "repeat(1 , 1fr)",
+    }    
 })

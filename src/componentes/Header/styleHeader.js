@@ -2,6 +2,7 @@ import { Conteiner } from "@/styles/global";
 import { styled } from "../../styles/index";
 
 export const StyledHeader = styled("header" , {
+    padding:"0 6rem",
     position: "absolute",
     top:0,
     width:"100%",
