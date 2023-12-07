@@ -1,7 +1,7 @@
 import { createStitches } from "@stitches/react";
 
 
-export const {styled,  globalCss, keyframes, getCssText, theme} = 
+export const {css, styled,  globalCss, keyframes, getCssText, theme} = 
 createStitches({
     theme: {
         colors: {
@@ -22,5 +22,6 @@ createStitches({
         lgScreen:"(max-width:1200px)",
         tablet:"(max-width:991px)",
         mobile:"(max-width:600px)",
+        mobile2:"(max-width:400px)",
     } 
 })

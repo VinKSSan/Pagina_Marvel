@@ -2,16 +2,29 @@ import Link from "next/link";
 import { StylesCardCharac } from "./stylesCards";
 
 import Image from "next/image";
+import { useRouter } from "next/router";
+
+
 
 export function CardsCharac( {image , name , slug }) {
+
+    let hrefValue = `characters/${slug}`
+
+    const router= useRouter();
+    const currentPage = router.asPath; 
+
+    
+    if(currentPage.includes('/characters/')) {
+        hrefValue = `${slug}`
+    }
     return(
         <StylesCardCharac>
-            <Link legacyBehavior href={`characters/${slug}`}>
+            <Link legacyBehavior href={hrefValue}>
                 <a className="aDiv">
                     <div className="image">
                         <Image
-                            width={"280px"}
-                            height={"372px"}
+                            width={280}
+                            height={372}
                             src={image}
                             alt="imagem do personagem"
                         /> 

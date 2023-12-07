@@ -43,6 +43,9 @@ export const StyledHeader = styled("header" , {
         padding: "0 23px",
         borderLeft: "solid 1px rgba(255  , 255 , 255, 0.2)",       
 
+    },
+    "@mobile":{
+        padding:'0'
     }
 
 

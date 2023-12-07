@@ -1,0 +1,35 @@
+{
+  "id": "charactere",
+  "label": "Charactere",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": { "label": "charac", "placeholder": "" }
+      },
+      "slug": {
+        "type": "Text",
+        "config": { "label": "slug", "placeholder": "" }
+      },
+      "imagecharac": {
+        "type": "Image",
+        "config": { "label": "imageCharac", "constraint": {}, "thumbnails": [] }
+      },
+      "nomecharac": {
+        "type": "Text",
+        "config": { "label": "nomeCharac", "placeholder": "" }
+      },
+      "descripitioncharac": {
+        "type": "StructuredText",
+        "config": {
+          "label": "descripitionCharac",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      }
+    }
+  }
+}

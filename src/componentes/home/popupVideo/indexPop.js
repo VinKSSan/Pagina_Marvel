@@ -1,17 +1,23 @@
 import Image from "next/image";
 import icon_Play from "./../../../assets/play.svg"
 
-import { PopVideoStyles } from "./sltylesPop";
+import imagem from "./../../../assets/thumb-video.png"
+import { PopVideoStyles } from "./stylesPop"
+import { MeuBotao } from "./botãoPop";
 
-export function PopVideo() {
+
+export const PopVideo = ({label, thumb}) => {
+
+   
+
     return(
         <PopVideoStyles>
-            <span>ASSISTA AO TRAILER</span>
-            <button>
+            <span>{label}</span>
+            <MeuBotao style={{backgroundImage:`url(${thumb})`}}>
                 <div>
                     <Image src={icon_Play} alt="icone de play(icon_play)"/>
                 </div>
-            </button>
+            </MeuBotao>
         </PopVideoStyles>
     )
 }

@@ -36,6 +36,37 @@ export const StyleFotter = styled("footer" , {
         width: "26rem",
         height:"100%",
         borderRadius: 5,
-    } 
+    },
+    "@tablet": {
+        flexDirection:'column-reverse',
+        img:{
+            marginBottom:'4rem',
+        },
+        [`${Conteiner}`]: {
+            "& > div": {
+                alignItems:'center',
+                p: {
+                    maxWidth:'60%',
+                    margin:"0rem 2rem"
+                }
+            }
+        }
+    },
+    '@mobile':{
+        padding:'1rem',
+        [`${Conteiner}`]: {
+            "& > div": {
+                flexDirection:'column-reverse',
+                strong :{
+                    marginTop:'2rem'
+                },
+                p: {
+                    maxWidth:'100%',
+                    textAlign:"center",
+                    margin:"0rem 2rem"
+                }
+            }
+        }
+    }
 
 })

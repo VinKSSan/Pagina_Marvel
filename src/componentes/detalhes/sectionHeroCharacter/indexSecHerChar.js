@@ -2,27 +2,26 @@ import { Conteiner } from "@/styles/global";
 import { StySecHerChar } from "./stylesSecHerChar";
 import Image from "next/image";
 
-import imagemCharac from "./../../../assets/character.jpg" 
 
-export function SecHerChar() {
+export function SecHerChar({data}) {
     return(
         <>
-            <StySecHerChar>
-                <Conteiner>
+            <StySecHerChar className="LLLEK">
+                <Conteiner className="contains">
                     <div className="image">
                         <Image
-                            src={imagemCharac}
+                            className="imag"
+                            src={data.imagecharac.url}
+                            width={data.imagecharac.dimensions.width}
+                            height={data.imagecharac.dimensions.height}
                             alt="imagem do personagem"
                         />
                     </div>
                     <div className="info">
                         <span>Historia</span>
                         <div>
-                            <h1>Nome do personagem</h1>
-                            <p>a historia do personagem quasque completa,
-                                com detalhes de raça ou espécie habilidades
-                                especiais, super poderes etc... 
-                                muito mais- jy</p>
+                            <h1>{data.nomecharac}</h1>
+                            <p>{data.descripitioncharac[0].text}</p>
                         </div>
                     </div>
                 </Conteiner>

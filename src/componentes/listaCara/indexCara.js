@@ -13,43 +13,50 @@ const characteres = [
         name: "KillMoger",
         image: imageCharac,
         slug: "/KillMoger",
+        key: 1,
     },
     {
         name: "KillMoge",
         image: imageCharac,
         slug: "/KillMoger",
+        key: 2,
     },
     {
         name: "KillMoer",
         image: imageCharac,
         slug: "/KillMoger",
+        key: 3,
     },
     {
         name: "KillMoger",
         image: imageCharac,
         slug: "/KillMoger",
+        key: 4,
     },
     {
         name: "KillMoge",
         image: imageCharac,
         slug: "/KillMoger",
+        key: 5,
     },
     {
         name: "KillMoer",
         image: imageCharac,
         slug: "/KillMoger",
+        key: 6,
     },
     {
         name: "KillMoer",
         image: imageCharac,
         slug: "/KillMoger",
+        key:7 ,
     }
 
 ]
 
-export function ListCara() {
+export function ListCara({data}) {
     return(
-        <StylesCara>
+        <StylesCara className="AALELEK">
             <Conteiner>
                 <div className="title">
                     <span>what if</span>
@@ -57,13 +64,13 @@ export function ListCara() {
                 </div>
                 <StylesListCara>
                     {
-                        characteres.map(character => {
+                        data.map(character => {
                             return(
                                 <CardsCharac 
-                                    image={character.image} 
-                                    name={character.name}
-                                    slug={character.slug}
-                                    key={character.name}/>
+                                    image={character.data.imagecharac.url} 
+                                    name={character.data.nomecharac}
+                                    slug={character.data.slug}
+                                    key={character.id}/>
                             ) 
                         })
                     }

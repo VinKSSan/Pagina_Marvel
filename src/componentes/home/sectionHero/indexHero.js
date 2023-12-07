@@ -19,7 +19,7 @@ const Sotials = [
     },
 ]
 
-export function SecHero() {
+export function SecHero({data}) {
     return(
         <SecHeroStyles>
             <Conteiner>
@@ -41,14 +41,15 @@ export function SecHero() {
                 </SotialArea>
                 <ContextText>
                     <div className="left">
-                        <h3>Marvel Studios</h3>
-                        <h1> uma das maiores produtoras de mundo</h1>
-                        <p>O sucesso da Marvel Studios se deve em 
-                            grande parte e surpresas para manter o 
-                            público engajado.</p>
-                        <a href="" target="_blank">saiba mais</a>
+                        <h3>llaoe</h3>
+                        <h1>{data.titlehero}</h1>
+                        <p>{data.description_hero[0].text}</p>
+                        <a href={data.url_button.url} target="_blank">{data.labelbutton}</a>
                     </div>
-                    <PopVideo/>
+                    <PopVideo 
+                        label={data.label_trailer} 
+                        thumb={data.tamb_trailer.url}
+                    />
                 </ContextText>
             </Conteiner>
             

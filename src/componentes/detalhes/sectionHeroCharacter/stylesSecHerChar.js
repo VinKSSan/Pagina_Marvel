@@ -5,9 +5,9 @@ import { styled } from "./../../../styles/index";
 export const StySecHerChar = styled("section" , {
 
     marginTop: 96,
-    height:631,
     borderBottom: "1px solid rgba(255,255,255,0.2)",
     marginBottom: 50,
+    padding:"0 60px",
     [`${Conteiner}`]: {
         display: "flex",
         alignItems: "center",
@@ -66,6 +66,63 @@ export const StySecHerChar = styled("section" , {
 
         }
 
+    },
+    "@tablet":{
+        padding:'0 2rem',
+        ".info": {
+            flexDirection:'column',
+            height:'50%',
+            margin:'0 3rem',
+            "& > div": {
+                width:'100%',
+                maxWidth:'100%',
+                padding:'0',
+                "&:before":{
+                    content: "",
+                    position: "absolute",
+                    top: 2,
+                    left:-18, 
+                    width:"80px",
+                    height: "4px",
+                    backgroundColor: "$red800",
+                },
+                h1 : {
+                    fontSize:'4rem'
+                },
+                p: {
+                    width:'100%',
+                }
+            }
+        },
+        ".image" : {
+            height: "calc(48vw*413/305)",
+            width:"48vw",
+            ".imag":{
+                height:"auto"
+            }
+        },
+    },
+    "@mobile":{
+        "& > div": {
+            width:'auto',
+            p: {
+                width:'90% !important',
+            }
+        },
+        ".contains":{
+            ".info": {
+                width:'100%'
+            },
+            paddingTop:'2rem',
+            display:'flex',
+            alignItems:"center",
+            justifyContent:"center",
+            flexDirection:'column',
+            ".image" : {
+                height: "calc(70vw*413/305)",
+                width:"70vw",
+            },
+        }
     }
 
 

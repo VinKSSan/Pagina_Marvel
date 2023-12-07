@@ -31,6 +31,12 @@ export const SecHeroStyles = styled("section" , {
         alignItems: "flex-start",
 
     },
+    "@tablet":{
+        height:'auto'
+    },
+    "@mobile":{
+        padding:'96px 1rem;'
+    }
 })
 
 export const SotialArea = styled("div" , {
@@ -68,7 +74,7 @@ export const ContextText = styled("div", {
     flex:1,
     paddingBottom:31,
     borderRight: "1px solid rgba(255, 255 ,255, 0.2)",
-    "& .left" : {
+    ".left" : {
         flex:1,
         maxWidth:574,
         paddingBottom:"10.1rem",
@@ -110,5 +116,38 @@ export const ContextText = styled("div", {
             }
         }
         
+    },
+    "@tablet":{
+        padding:'0 !important',
+        margin:'0 !important',
+        flexDirection:'column',
+        ".left" : {
+            maxWidth:"98%",
+            paddingBottom:'5rem',
+            h1:{
+                maxWidth:"80%",
+            },
+            p: {
+                fontWeight:400,
+                fontSize:"1.6rem",
+                lineHeight:"21px",
+                color:"$gray200",
+                maxWidth:'80%',
+                marginBottom:25,
+            }
+        }
+    },
+    "@mobile":{
+       ".left":{
+            h1:{
+                fontSize:"4rem",
+                lineHeight:"4rem",
+            },
+            p: {
+                fontSize:"1.5rem",
+                lineHeight:"18px",
+                color:"$gray200",
+            },
+       }
     }
 })

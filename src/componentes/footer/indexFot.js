@@ -16,8 +16,8 @@ export function Footer(){
                 </div>
             </Conteiner>
             <Image
-                        alt=""
-                        src={LogMarv}
+                alt=""
+                src={LogMarv}
                     />
         </StyleFotter>
     )

@@ -55,14 +55,7 @@ export const StylesCardCharac = styled("div" , {
     "@tablet": {
         maxWidth:"45vh",
         ".image": {
-            height: "70vh"
+            height: "auto"
         },
     }, 
-    "@mobile": {
-        maxWidth:"90vh",
-        ".image": {
-            height: "70vh"
-        }
-    }   
-
 })
